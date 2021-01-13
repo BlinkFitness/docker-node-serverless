@@ -5,6 +5,7 @@ RUN apk add --no-cache \
   py-pip \
   py-setuptools \
   ca-certificates \
+  build-base \
   groff \
   less \
   bash && \
@@ -13,6 +14,6 @@ RUN apk add --no-cache \
 ENV NODE_ENV development
 
 RUN npm install -g npm@latest \
-  && npm install -g serverless@2.8.0
+  && npm install -g serverless@2.16.0
 
 ENTRYPOINT ["/bin/bash", "-c"]
