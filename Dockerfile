@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:10-alpine
 
 RUN apk add --no-cache \
   python \
@@ -13,7 +13,6 @@ RUN apk add --no-cache \
 
 ENV NODE_ENV development
 
-RUN npm install -g npm@latest \
-  && npm install -g serverless@2.16.0
+RUN yarn global add serverless@1.51.0
 
 ENTRYPOINT ["/bin/bash", "-c"]
