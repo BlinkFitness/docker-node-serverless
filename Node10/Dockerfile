@@ -13,6 +13,6 @@ RUN apk add --no-cache \
 
 ENV NODE_ENV development
 
-RUN yarn global add serverless@1.51.0
+RUN npm install -g serverless@1.51.0
 
 ENTRYPOINT ["/bin/bash", "-c"]
