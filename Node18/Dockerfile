@@ -9,9 +9,7 @@ RUN apk add --no-cache \
   groff \
   less \
   bash && \
-  python -m venv ./venv && \
-  source ./venv/bin/activate && \
-  pip install --no-cache-dir --upgrade pip awscli
+  pip install --no-cache-dir --break-system-packages --upgrade pip awscli
 
 ENV NODE_ENV development
 
